@@ -1,16 +1,15 @@
-﻿
-@model LoginViewModel
-
+﻿@model PatientLogin
 @{
-    ViewData["Title"] = "Login";
+    ViewData["Title"] = "PatientLogin";
 }
 
-<h1 class="text-center box-shadow">Admin Login </h1>
+
+<h1 class="text-center box-shadow">Patient Login </h1>
 
 
 <div class="container">
     <div class="row">
-       
+
         <div class="col-md-10 offset-1">
             <div class="row">
                 <div class="col-md-5 align-content-xxl-start offset-0">
@@ -44,38 +43,34 @@
 
 
                                 <div class="form-group">
-                                    @*<input type="submit" class="btn btn-block btn-primary " value="Sign In" />*@
+                                   
                                     <div class="text-left">
-                                        <a class="btn btn-block btn-primary " asp-action="AdminHome" asp-controller="Account" value="Sign In"> Sign In </a>
-                                        @*<a class="btn btn-block btn-primary " asp-action="PatientHome" asp-controller="Account" value="Sign In"> Sign In </a>*@
+
+                                        <a class="btn btn-block btn-primary " asp-action="PatientHome" asp-controller="Account" value="Sign In"> Sign In </a>
 
                                     </div>
 
                                 </div>
                                 <div class="text-center">
-                                   
+
                                     <a class="text-primary" asp-action="ForgotPassword">Forgot Password</a>
 
 
                                 </div><br />
 
-                                @*<div class="text-left">
-                                    <h6 class="text-bg-danger">New Account <a class="text-light  btn btn-primary " asp-action="SignUp" asp-controller="Account"> Sign Up </a></h6>
-
-                                </div>*@
+                               
                             </div>
                         </div>
-                        
-                    </form>
-                     <div class="text-left">
-                                    <h6 class="text-bg-danger">New Account <a class="text-light  btn btn-primary " asp-action="SignUp" asp-controller="Account"> Sign Up </a></h6>
 
-                                </div>
-                            
+                    </form>
+                    <div class="text-left">
+                        <h6 class="text-bg-danger">New Account <a class="text-light  btn btn-primary " asp-action="SignUp" asp-controller="Account"> Sign Up </a></h6>
+
+                    </div>
+
 
                 </div>
             </div>
         </div>
     </div>
 </div>
-

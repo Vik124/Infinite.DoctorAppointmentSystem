@@ -57,6 +57,75 @@ namespace Infinite.DoctorAppointmentSystem.Controllers
                 return View(signUp);
             }
         }
+
+
+        [HttpGet]
+        public IActionResult AdminHome()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [Route("Account/AdminHome")]
+        public IActionResult AdminHome(AdminHomeViewModel adminHome)
+
+        {
+
+            if (ModelState.IsValid)
+            {
+                return RedirectToAction("Login", "AdminHome");
+            }
+            else
+            {
+                return View(adminHome);
+            }
+        }
+
+        [HttpGet]
+        public IActionResult PatientHome()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [Route("Account/PatientHome")]
+        public IActionResult PatientHome(PatientHomeViewModel patientHome)
+
+        {
+
+            if (ModelState.IsValid)
+            {
+                return RedirectToAction("PatientLogin", "PatientHome");
+            }
+            else
+            {
+                return View(patientHome);
+            }
+        }
+
+
+        [HttpGet]
+        public IActionResult PatientLogin()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [Route("Account/PatientLogin")]
+        public IActionResult PatientLogin(PatientLogin patientLogin)
+
+        {
+
+            if (ModelState.IsValid)
+            {
+                return RedirectToAction("PatientLogin", "Account");
+            }
+            else
+            {
+                return View(patientLogin);
+            }
+
+        }
     }
 }
   

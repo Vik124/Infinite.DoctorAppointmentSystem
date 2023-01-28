@@ -10,13 +10,15 @@
         <div class="col-md-12 offset-1">
             <div class="row">
                 <div class="col-md-5 align-content-xxl-start offset-0">
-                    <img src="https://www.shutterstock.com/image-photo/laptop-keyboard-stethoscope-on-blue-260nw-1907543080.jpg" width="500" height="500" />
+                    <img src="https://img.freepik.com/free-photo/retired-person-using-wheelchair-talking-with-senior-doctor-appointment-while-being-helped-by-professional-nurse-private-clinic-older-man-living-with-disability-busy-hospital-reception_482257-46754.jpg?w=2000" width="500" height="500" />
+                    @*<img src="https://www.shutterstock.com/image-photo/laptop-keyboard-stethoscope-on-blue-260nw-1907543080.jpg" width="500" height="500" />*@
                 </div>
 
                 <div class="col-md-5 align-content-xl-end border border-dark shadow-lg rounded pl-5 pr-5 pb-3 offset-2">
-                    <form asp-controller="Accounts" asp-asp-action="Login" method="post">
+                    <form 3 method="post">
                         @*<div asp-validation-summary="All" class="text-danger"></div>*@
 
+                        <br />
                         <div class="form-group">
                             <label asp-for="UserName"></label>
                             <input type="text" asp-for="UserName" placeholder="Enter User Name" class="form-control" autocomplete="off" />
@@ -26,7 +28,7 @@
 
                         <div class="form-group">
                             <label asp-for="Email"></label>
-                            <input type="text" asp-for="Email" placeholder="Enter your Email " class="form-control" autocomplete="off" />
+                            <input type="email" asp-for="Email" placeholder="Enter your Email " class="form-control" autocomplete="off" />
                             <span asp-validation-for="Email" class="text-danger"></span>
 
 
@@ -35,7 +37,7 @@
 
                         <div class="form-group">
                             <label asp-for="MobileNo"></label>
-                            <input type="text" asp-for="MobileNo" placeholder="Enter Your Mobile NUmber" class="form-control" autocomplete="off" />
+                            <input type="number" asp-for="MobileNo" placeholder="Enter Your Mobile NUmber" class="form-control" autocomplete="off" />
                             <span asp-validation-for="MobileNo" class="text-danger"></span>
 
 
@@ -56,19 +58,19 @@
 
 
                         </div>
-
-                        @*<div class="form-group">
+                        <br />
+                        <div class="form-group">
                     <label asp-for="Roles"></label>
                     <select>
 
                         <option value="">--Select--</option>
-                        <option value="Seller">Seller</option>
-                        <option value="Buyer">Buyer</option>
+                        <option value="Patient">Patient</option>
+                        <option value="Admin">Admin</option>
                     </select>
 
-                </div>*@
+                </div>
                         <div class="form-group">
-                            <input type="submit" class="=btn btn-primary btn-lg mb-1 float-right" value="Register" />
+                            <input type="submit" class="=btn btn-primary btn-lg mb-1 float-right" value="Register" style="text-align:right; margin:auto" />
 
                         </div>
                     </form>
